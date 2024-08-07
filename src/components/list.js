@@ -1,5 +1,5 @@
 import '../App.css';
-
+import { Edit, Check, Del, Undo } from '../assets/img/img';
 import { useState } from 'react';
 
 
@@ -60,14 +60,14 @@ const Event = ({data, deleteTodo, updateTodo, markTodo}) =>{
             {onUpdate? <div className='lists'><input type="checkbox" onClick={checkBtn}/>
             <div className='todo' style={{textDecoration : data.checks? 'Line-through' :'none'}}>{data.todo}</div>
             <div className='list_btns'>
-            <span onClick={editBtn}><img src="./assets/free-icon-font-edit-3917361.png" alt="수정"/></span>
-            <span onClick={deleteBtn}><img src="./assets/free-icon-delete-10302227.png" alt="삭제"/></span></div>
+            <span onClick={editBtn}><img src={Edit} alt="수정"/></span>
+            <span onClick={deleteBtn}><img src={Del} alt="삭제"/></span></div>
             </div>
             : <div className='edits'>
             <input type="text" name='todo' value={edits.todo} onChange={changeTxt}/>
             <div className='edit_btns'>
-            <span onClick={changeBtn}><img src="./assets/free-icon-font-check-3917749.png" alt="수정완료"/></span>
-            <span onClick={cancleBtn}><img src="./assets/free-icon-font-undo-3917284.png" alt="수정취소"/></span>
+            <span onClick={changeBtn}><img src={Check} alt="수정완료"/></span>
+            <span onClick={cancleBtn}><img src={Undo} alt="수정취소"/></span>
             </div>
             </div>}
             </li>
