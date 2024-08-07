@@ -58,7 +58,7 @@ const Event = ({data, deleteTodo, updateTodo, markTodo}) =>{
     return(
         <li className='lists_wrap'>
             {onUpdate? <div className='lists'><input type="checkbox" onClick={checkBtn}/>
-            <div className='todo' style={{textDecoration : data.checks? 'Line-through' :'none'}}>{data.todo}</div>
+            <p className='todo' style={{textDecoration : data.checks? 'Line-through' :'none'}}>{data.todo}</p>
             <div className='list_btns'>
             <span onClick={editBtn}><img src={Edit} alt="수정"/></span>
             <span onClick={deleteBtn}><img src={Del} alt="삭제"/></span></div>

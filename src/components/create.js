@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../App.css';
-import { Add } from '../assets/img/img';
 
 const Create = ({CreateTodo})=>{
 
@@ -29,7 +28,7 @@ const Create = ({CreateTodo})=>{
   return (
     <div className='create_wrap'>
         <input type="text" name='todo' value={todo} onChange={newTodo}/>
-        <span onClick={createBtn} className='addBtn'><img src={Add} alt="추가" /></span>
+        <div onClick={createBtn} className='addBtn'>Add task</div>
     </div>
   );
 }
